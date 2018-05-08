@@ -15,7 +15,14 @@ class App extends Component {
 
   render() {
     return(
-      <h1>Create a Router Here</h1>
+      <Router history={browserHistory}>
+        <Route path='/' component={NavBar} >
+          <Route path='greeting' component={Greeting}/>
+          <Route path='goodbye' component={Goodbye}/>
+          <Route path='customgreeting' component={CustomGreeting}/>
+      </Route>
+    </Router>
+
     )
   }
 }
