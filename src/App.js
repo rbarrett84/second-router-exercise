@@ -5,6 +5,7 @@ import Goodbye from './components/Goodbye'
 import NavBar from './components/NavBar'
 import CustomGreeting from './containers/CustomGreeting'
 
+
 class App extends Component {
   constructor(props){
     super(props)
@@ -16,10 +17,10 @@ class App extends Component {
   render() {
     return(
       <Router history={browserHistory}>
-        <Route path='/' component={NavBar} >
-          <Route path='greeting' component={Greeting}/>
-          <Route path='goodbye' component={Goodbye}/>
-          <Route path='customgreeting' component={CustomGreeting}/>
+          <Route path='/' component={NavBar} name='Nav Bar' >
+          <Route path='Greeting' component={Greeting} name='Greeting'/>
+          <Route path='Goodbye' component={Goodbye} name='Greeting'/>
+          <Route path='Custom' component={CustomGreeting} name='Custom Greeting'/>
       </Route>
     </Router>
 

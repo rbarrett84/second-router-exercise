@@ -14,14 +14,24 @@ class NavBar extends Component{
       <div>
       <div className="navbar">
         <Link to='/'> HOME </Link>
+      </div>
+
+      <div>
         <Link to='/greeting'>GREETING</Link>
+      </div>
+
+      <div>
         <Link to='/goodbye'>GOODBYE</Link>
+      </div>
+
         <Link to='/custom'>CUSTOM GREETING</Link>
-      </div>
-      <div className="content">
+
+      <div>
         <h1 className="page-title">Ways to say Hello and Goodbye</h1>
-        {props.children}
+        { this.props.children }
       </div>
+
+
     </div>
     )
   }
